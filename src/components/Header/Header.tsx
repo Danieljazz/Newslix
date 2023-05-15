@@ -50,7 +50,7 @@ const Header = ({ showLeftBar, setShowLeftBar }: HeaderProps) => {
       </button>
 
       <Link to="/">
-        <span>gnNews</span>
+        <span>Newslix</span>
       </Link>
       <div className="list-tile" data-testid="list-tile-switch">
         <span>{t("tiles")}</span>

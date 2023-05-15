@@ -6,7 +6,7 @@ i18next.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
-        homeMsg: `Welcome on GnNews - news aggregate In the headbar you can switch between list and tiles. On the left there is list of countries for which news will be fetched`,
+        homeMsg: `Welcome on Newslix - news aggregate In the headbar you can switch between list and tiles. On the left there is list of countries for which news will be fetched`,
         tiles: "Tiles",
         list: "List",
         countries: countries,
@@ -24,7 +24,7 @@ i18next.use(initReactI18next).init({
     },
     pl: {
       translation: {
-        homeMsg: `Witaj w aplikacji GnNews - najlepszym agregacie newsów. 
+        homeMsg: `Witaj w aplikacji Newslix - najlepszym agregacie newsów. 
                 W górnym pasku możesz zmieniać wygląd newsów jako listę
                 lub kafelki. W lewym pasku znajduje się lista krajów,
                 po klinięciu na dany kraj wyświetlone zostaną jego wiadomości.`,
@@ -45,7 +45,7 @@ i18next.use(initReactI18next).init({
     },
     ua: {
       translation: {
-        homeMsg: `Ласкаво просимо до програми GnNews - найкращого агрегатора новин.
+        homeMsg: `Ласкаво просимо до програми Newslix - найкращого агрегатора новин.
                  У верхній панелі ви можете змінити вигляд новин у вигляді списку
                  або плитки. На панелі зліва є список країн,
                  після натискання на країну відображатимуться її новини.`,
