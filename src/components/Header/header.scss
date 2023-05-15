@@ -1,0 +1,81 @@
+@import "../../styles.scss";
+.header {
+  width: 100%;
+  height: 90px;
+  padding: 0;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 2rem;
+  background-color: $navbar-bg;
+  color: #fff;
+  position: relative;
+  @include mobile {
+    font-size: 10px;
+    width: 100%;
+    gap: 1rem;
+  }
+  .menu {
+    display: none;
+    @include mobile {
+      display: block;
+      padding: 5px 5px;
+      border-radius: 0;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    font-size: 60px;
+    &:hover {
+      transform: scale(1.02);
+    }
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+  .list-tile {
+    display: flex;
+    align-items: center;
+    & > div {
+      margin: 0px 20px 0px 20px;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+  .dropdown {
+    display: none;
+    @include mobile {
+      display: block;
+    }
+    select {
+      font-size: 10px;
+      option {
+        font-size: 16px;
+      }
+    }
+    span {
+      margin-right: 10px;
+    }
+  }
+  button {
+    border: 1px solid #000;
+    font-size: 20px;
+    background-color: #e0e1dd;
+    padding: 10px 10px;
+    border-radius: 20px 20px;
+    cursor: pointer;
+    @include mobile {
+      font-size: 10px;
+      padding: 5px 5px;
+    }
+  }
+  select {
+    @include mobile {
+      font-size: 10px;
+    }
+  }
+}

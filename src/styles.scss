@@ -1,0 +1,9 @@
+$navbar-bg: #0d1b2a;
+$leftbar-bg: #1b263b;
+$tile-bg: #778da9;
+$mcontent-bg: #415a77;
+@mixin mobile {
+  @media (max-width: 880px) {
+    @content;
+  }
+}

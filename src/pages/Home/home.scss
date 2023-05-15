@@ -1,0 +1,25 @@
+@import "../../styles.scss";
+.home {
+  height: 100vh;
+  position: relative;
+  .left-bar {
+    flex: 1;
+    @include mobile {
+      display: block;
+      position: absolute;
+      top: 85px;
+    }
+  }
+  .welcome-msg {
+    width: 100%;
+    background-color: $mcontent-bg;
+    padding: 120px 120px;
+    font-size: 30px;
+    color: white;
+    @include mobile {
+      font-size: 10px;
+      padding: 5px 5px;
+      height: 90vh;
+    }
+  }
+}

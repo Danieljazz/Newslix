@@ -1,0 +1,21 @@
+@import "../../styles.scss";
+.footer {
+  height: 40px;
+  font-size: 8px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #0d1b2a;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+  span {
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+}
