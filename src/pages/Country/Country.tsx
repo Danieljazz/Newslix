@@ -49,14 +49,16 @@ const Country = () => {
   }, [countryName]);
 
   return (
-    <div className="country-news">
-      <Header showLeftBar={showLeftBar} setShowLeftBar={setShowLeftBar} />
-      <div style={{ display: "flex" }}>
-        {showLeftBar && <LeftBar setShowLeftBar={setShowLeftBar} />}
-        <News articles={news?.articles} />
+    <>
+      <div className="country-news">
+        <Header showLeftBar={showLeftBar} setShowLeftBar={setShowLeftBar} />
+        <div style={{ display: "flex", backgroundColor: "#415a77" }}>
+          {showLeftBar && <LeftBar setShowLeftBar={setShowLeftBar} />}
+          <News articles={news?.articles} />
+        </div>
+        <Footer count={news?.totalResults} />
       </div>
-      <Footer count={news?.totalResults} />
-    </div>
+    </>
   );
 };
 

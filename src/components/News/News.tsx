@@ -25,34 +25,53 @@ const News = ({ articles }: ArticleType) => {
     setActiveArticle(article);
     setOpenNewsPopUp(true);
   };
-
   return (
     <div className="news">
       <h1>{t("newsTitle")}</h1>
-      {isList ? (
-        <ul>
-          {articles?.map((article: Article) => (
-            <li onClick={() => handleActiveAcrticle(article)} key={uuidv4()}>
-              <span>{article.title.replace(`- ${article.author}`, "")}</span>
-              <div className="article-info">
-                <span>{article.source.name}</span>
-                <span>{moment(article.publishedAt).fromNow()}</span>
-              </div>
-            </li>
-          ))}
-        </ul>
+      {articles === undefined ? (
+        <h2
+          style={{
+            backgroundColor: "#415a77",
+            width: "100vw",
+            height: "100vh",
+            color: "white",
+          }}
+        >
+          Loading...
+        </h2>
       ) : (
-        <div className="tiles">
-          {articles?.map((article) => (
-            <div
-              onClick={() => handleActiveAcrticle(article)}
-              key={uuidv4()}
-              data-testid="news-tile"
-            >
-              <NewsTile {...article} />
+        <>
+          {isList ? (
+            <ul>
+              {articles?.map((article: Article) => (
+                <li
+                  onClick={() => handleActiveAcrticle(article)}
+                  key={uuidv4()}
+                >
+                  <span>
+                    {article.title.replace(`- ${article.author}`, "")}
+                  </span>
+                  <div className="article-info">
+                    <span>{article.source.name}</span>
+                    <span>{moment(article.publishedAt).fromNow()}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div className="tiles">
+              {articles?.map((article) => (
+                <div
+                  onClick={() => handleActiveAcrticle(article)}
+                  key={uuidv4()}
+                  data-testid="news-tile"
+                >
+                  <NewsTile {...article} />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          )}
+        </>
       )}
       <div>{isList}</div>
       {openNewsPopUp && activeArticle && (
